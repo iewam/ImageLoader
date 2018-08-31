@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_marginTop="15dp"
+        android:id="@+id/id_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="240dp" />
+
+    <Switch
+        android:id="@+id/id_diskSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/id_loadImgBtn"
+        android:layout_below="@+id/id_imageview"
+        android:layout_marginBottom="30dp"
+        android:text="DISK CACHE" />
+
+    <Switch
+        android:id="@+id/id_memorySwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/id_diskSwitch"
+        android:layout_alignTop="@+id/id_diskSwitch"
+        android:layout_marginLeft="15dp"
+        android:text="MEMORY CACHE" />
+
+    <Button
+        android:id="@+id/id_loadImgBtn"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/id_diskSwitch"
+        android:layout_margin="10dp"
+        android:background="#33FF0000"
+        android:onClick="loadImage"
+        android:text="LOAD IMAGE" />
+
+    <Button
+        android:id="@+id/id_clearDiskCacheBtn"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/id_loadImgBtn"
+        android:layout_margin="10dp"
+        android:background="#33FF0000"
+        android:onClick="clearDiskCache"
+        android:text="CLEAN DISK CACHE" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/id_clearDiskCacheBtn"
+        android:layout_margin="10dp"
+        android:background="#33FF0000"
+        android:onClick="clearMemoryCache"
+        android:text="CLEAN MEMORY CACHE" />
+
+
+
+</RelativeLayout>
